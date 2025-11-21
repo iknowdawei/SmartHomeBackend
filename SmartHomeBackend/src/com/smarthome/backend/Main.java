@@ -11,6 +11,9 @@ public class Main {
 
 	    logStartup();
 	    processMotionEvent(sensorId, motionDetected);
+	    
+	 // NEW line on feature-diagnostics branch
+	    printDiagnostics();
 
 	    System.out.println("Backend processing complete.");
 	}
@@ -33,4 +36,15 @@ public class Main {
 	        logEvent(sensorId, "NO_MOTION");
 	    }
 	}
+	/**
+	 * Simple diagnostics method for the feature-diagnostics branch.
+	 */
+	private static void printDiagnostics() {
+	    System.out.println("=== Diagnostics ===");
+	    System.out.println("Backend version: 1.0.0");
+	    System.out.println("Motion sensor endpoints: OK");
+	    System.out.println("Database connection: OK (simulated)");
+	    System.out.println("===================");
+	}
+
 
